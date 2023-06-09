@@ -38,7 +38,7 @@ Run following commands in Terminal (Linux / MacOS) or CMD / Git Bash (Windows)
 
 git clone https://github.com/kosoewin/linuxlab.git
 
-cd k8s-lab
+cd linuxlab
 
 vagrant plugin install vagrant-vbguest --plugin-version 0.21
 
