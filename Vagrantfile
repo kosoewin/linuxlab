@@ -14,12 +14,12 @@ Vagrant.configure("2") do |config|
     centos_lab.vm.network "private_network", ip: "192.168.101.10"
     centos_lab.vm.provision "shell", path: "generate_hosts.sh"
 	  centos_lab.vm.provider :virtualbox do |centos_lab|
-          centos_lab.customize ["modifyvm", :id, "--memory", "2048"]
+          centos_lab.customize ["modifyvm", :id, "--memory", "512"]
           centos_lab.customize ["modifyvm", :id, "--cpus", "2"]
         end
   end
   
-  config.vm.define "ubuntu-lab" do |ubuntu_lab|
+  config.vm.define "ubuntu_lab" do |ubuntu_lab|
     ubuntu_lab.vm.box = "generic/ubuntu2204"
     ubuntu_lab.vm.hostname = "ubuntu_lab"
     ubuntu_lab.vm.network "private_network", ip: "192.168.101.20"
