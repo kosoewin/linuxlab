@@ -40,8 +40,6 @@ git clone https://github.com/kosoewin/linuxlab.git
 
 cd linuxlab
 
-vagrant plugin install vagrant-vbguest --plugin-version 0.21
-
 vagrant up
 
 vagrant ssh status
