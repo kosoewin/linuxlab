@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
     ubuntu_lab.vm.network "private_network", ip: "192.168.101.20"
     ubuntu_lab.vm.provision "shell", path: "generate_hosts.sh"
 	  ubuntu_lab.vm.provider :virtualbox do |ubuntu_lab|
-          ubuntu.v.gui = true
+          ubuntu_lab.v.gui = true
           ubuntu_lab.customize ["modifyvm", :id, "--memory", "512"]
           ubuntu_lab.customize ["modifyvm", :id, "--cpus", "2"]
 	end
