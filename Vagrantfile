@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
   end
   
   config.vm.define "ubuntu_lab" do |ubuntu_lab|
-    ubuntu_lab.vm.box = "ubuntu/focal64"
+    ubuntu_lab.vm.box = "generic/ubuntu2204"
     ubuntu_lab.vm.hostname = "ubuntulab"
     ubuntu_lab.vm.network "private_network", ip: "192.168.101.20"
     ubuntu_lab.vm.network "forwarded_port", guest: 22, host: 2223, id: "ssh"
